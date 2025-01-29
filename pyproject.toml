@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "nutribot"
+version = "0.1.0"
+description = "Chatbot para planejamento e monitoramento nutricional"
+authors = ["Felipe-M94 <felipe.silva.mendonca@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+spacy = "^3.8.4"
+python-dotenv = "^1.0.1"
+taskipy = "^1.14.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^4.1.0"
+ruff = "^0.0.290"
+black = "^23.3.0"
+taskipy = "^1.11.0"
+pre-commit = "^3.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+ignore = ["W503"]
+
+[tool.pytest.ini_options]
+addopts = "--maxfail=3 --disable-warnings --cov=nutribot"
+testpaths = ["tests"]
+
+[tool.taskipy.tasks]
+run = "python -m nutribot.bot"
+pre_test = "task lint"
+test = "pytest -s -x --cov=nutribot -vv"
+post_test = "coverage html"
+lint = "ruff check . && ruff check . --diff"
+format = "ruff check . --fix && black ."
