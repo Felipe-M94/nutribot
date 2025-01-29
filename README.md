@@ -1,4 +1,4 @@
-# NutriBot Documentation
+# NutriBot Documentação
 
 ## **Visão Geral do Projeto**
 
@@ -77,8 +77,8 @@ SPOONACULAR_API_KEY=<SUA_CHAVE_DA_API_SPOONACULAR>
 
 1. **Clone o repositório**:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd <DIRETORIO_CLONADO>
+   git clone [<URL_DO_REPOSITORIO>](https://github.com/Felipe-M94/nutribot.git)
+   
    ```
 
 2. **Instale as dependências**:
