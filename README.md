@@ -77,7 +77,7 @@ SPOONACULAR_API_KEY=<SUA_CHAVE_DA_API_SPOONACULAR>
 
 1. **Clone o repositório**:
    ```bash
-   git clone [<URL_DO_REPOSITORIO>](https://github.com/Felipe-M94/nutribot.git)
+   git clone https://github.com/Felipe-M94/nutribot.git
    
    ```
 
